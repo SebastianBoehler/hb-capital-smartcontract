@@ -1,0 +1,21 @@
+[package]
+name = "hb-capital-smartcontract"
+version = "0.1.0"
+description = "Making our transactions more transparent and easy verifiable"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "hb_capital_smartcontract"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.30.0"
+solana-program = "=1.18.4"
